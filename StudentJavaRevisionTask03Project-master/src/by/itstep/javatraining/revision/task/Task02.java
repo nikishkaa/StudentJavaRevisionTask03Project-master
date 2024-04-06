@@ -48,6 +48,7 @@ public class Task02 {
     public static boolean start(int x1, int y1, int x2, int y2) {
         if (x1 < CHESS_START_MIN_X_POSITION
                 // !!ПОЧЕМУ ЭТО ЗНАЧЕНИЕ ДОЛЖНО БЫТЬ РАВНО 1 А НЕ 2? НАЧАЛЬНАЯ ЖЕ КООРДИНАТА ДОЛЖНА БЫТЬ МЕНЬШЕ 2 А НЕ 1
+                // Судя по тесту там чтото не правильно с х1 координатой
                 || y1 > CHESS_MAX_SIZE || y1 < CHESS_MIN_SIZE
                 || x2 > CHESS_MAX_SIZE || x2 < CHESS_MIN_SIZE
                 || y2 < CHESS_MIN_SIZE || y2 > CHESS_MAX_SIZE) {
