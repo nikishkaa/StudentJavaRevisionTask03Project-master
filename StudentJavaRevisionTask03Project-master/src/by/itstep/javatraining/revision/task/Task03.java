@@ -29,7 +29,19 @@ package by.itstep.javatraining.revision.task;
  */
 
 public class Task03 {
+    public static final int CHESS_MAX_SIZE = 8;
+    public static final int CHESS_MIN_SIZE = 1;
+
     public static boolean start(int x1, int y1, int x2, int y2) {
-        return false;
+
+        if (x1 > CHESS_MAX_SIZE || x1 < CHESS_MIN_SIZE ||
+                x2 > CHESS_MAX_SIZE || x2 < CHESS_MIN_SIZE ||
+                y1 > CHESS_MAX_SIZE || y1 < CHESS_MIN_SIZE ||
+                y2 > CHESS_MAX_SIZE || y2 < CHESS_MIN_SIZE) {
+            return false;
+        }
+
+        // почему то не работает хотя вроде бы должен
+        return (x1 == x2) || (y1 == y2);
     }
 }
