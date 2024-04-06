@@ -56,7 +56,6 @@ public class Task02 {
             step = true;
         }
 
-
         return step;
     }
 }
