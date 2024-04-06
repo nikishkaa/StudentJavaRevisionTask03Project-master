@@ -41,21 +41,18 @@ package by.itstep.javatraining.revision.task;
  */
 
 public class Task02 {
-    public static final int CHESS_START_MIN_X_POSITION = 2;
-    public static final int CHESS_SIZE = 8;
+    public static final int CHESS_START_MIN_X_POSITION = 1;
+    public static final int CHESS_MAX_SIZE = 8;
+    public static final int CHESS_MIN_SIZE = 1;
 
     public static boolean start(int x1, int y1, int x2, int y2) {
-        if (x1 < CHESS_START_MIN_X_POSITION ||
-                x1 > 8 || y1 > 8 || y1 < 1 || x2 > 8 || x2 < 1 || y2 < 1 || y2 > 8) {
+        if (x1 < CHESS_START_MIN_X_POSITION
+                || y1 > CHESS_MAX_SIZE || y1 < CHESS_MIN_SIZE
+                || x2 > CHESS_MAX_SIZE || x2 < CHESS_MIN_SIZE
+                || y2 < CHESS_MIN_SIZE || y2 > CHESS_MAX_SIZE) {
             return false;
         }
 
-        boolean step = false;
-
-        if (x2 == x1 - 1 && y1 == y2) {
-            step = false;
-        }
-
-        return step;
+        return x1 == x2 && y2 == y1 + 1;
     }
 }
