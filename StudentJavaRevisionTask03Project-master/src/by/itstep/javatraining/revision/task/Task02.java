@@ -53,7 +53,7 @@ public class Task02 {
         boolean step = false;
 
         if (x2 == x1 - 1 && y1 == y2) {
-            step = true;
+            step = false;
         }
 
         return step;
