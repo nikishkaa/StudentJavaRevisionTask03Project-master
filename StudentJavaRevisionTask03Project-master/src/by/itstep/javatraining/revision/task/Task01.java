@@ -30,13 +30,15 @@ package by.itstep.javatraining.revision.task;
  */
 
 public class Task01 {
-    public static final int CHESS_SIZE = 8;
+    public static final int CHESS_MAX_SIZE = 8;
+    public static final int CHESS_MIN_SIZE = 1;
 
     public static boolean start(int x, int y) {
-        if (x > CHESS_SIZE || y > CHESS_SIZE || x < 1 || y < 1) {
+        if (x > CHESS_MAX_SIZE || y > CHESS_MAX_SIZE
+                || x < CHESS_MIN_SIZE || y < CHESS_MIN_SIZE) {
             return false;
         }
-        
+
         return (x % 2 == 0 && y % 2 == 0) || (x % 2 != 0 && y % 2 != 0);
     }
 }
