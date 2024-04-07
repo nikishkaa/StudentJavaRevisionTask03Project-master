@@ -42,9 +42,30 @@ public class Task04 {
 
         boolean step = false;
 
-        if () {
+        int posDelX = x1 + 1;
+        int negDelX = x1 - 1;
+        int posDelY = y1 + 1;
+        int negDelY = y1 - 1;
+
+        // Незнаю почему работает закоменченные строчки в теории тоже надо
+        if ((x2 == posDelX) || (x2 == negDelX)
+                || (y2 == posDelY) || (y2 == negDelY)
+/*                || (x2 == posDelX && y2 == posDelY)
+                || (x2 == posDelX && y2 == negDelY)
+                || (x2 == negDelX && y2 == posDelY)
+                || (x2 == negDelX && y2 == negDelY)*/
+        ) {
+            step = true;
         }
 
+        /*
+         ЕСЛИ ТЕ СТРОЧКИ НЕ НУЖНЫ ТО МОЖНО ТАК ВОЗВРАЩАТЬ
+         И ТОГДА ПЕРЕМЕННЫЕ МОЖНО НЕ ВВОДИТЬ
+         */
+
+/*        return (x2 == posDelX) || (x2 == negDelX)
+                || (y2 == posDelY) || (y2 == negDelY);
+                */
 
         return step;
     }
