@@ -20,19 +20,20 @@ public class TaskTester {
     }
 
     private static boolean checkBasicFoolProof(ChessMethod method) {
-        return !method.execute(0, 2, 2, 2)
-                && !method.execute(2, 0, 2, 2)
-                && !method.execute(2, 2, 0, 2)
-                && !method.execute(2, 2, 2, 0)
-                && !method.execute(-1, 3, 3, 3)
-                && !method.execute(3, -1, 3, 3)
-                && !method.execute(3, 3, -1, 3)
-                && !method.execute(3, 3, 3, -1)
-                && !method.execute(9, 5, 5, 5)
-                && !method.execute(5, 9, 5, 5)
-                && !method.execute(5, 5, 9, 5)
-                && !method.execute(5, 5, 5, 9)
-                && !method.execute(5, 5, 5, 5);
+        return !(method.execute(0, 2, 2, 2)
+                || method.execute(2, 0, 2, 2)
+                || method.execute(2, 2, 0, 2)
+                || method.execute(2, 2, 2, 0)
+                || method.execute(-1, 3, 3, 3)
+                || method.execute(3, -1, 3, 3)
+                || method.execute(3, 3, -1, 3)
+                || method.execute(3, 3, 3, -1)
+                || method.execute(9, 5, 5, 5)
+                || method.execute(5, 9, 5, 5)
+                || method.execute(5, 5, 9, 5)
+                || method.execute(5, 5, 5, 9)
+                || method.execute(5, 5, 5, 5)
+                || method.execute(5, 3, 5, 3));
     }
 
 
@@ -159,13 +160,16 @@ public class TaskTester {
         boolean result = checkBasicFoolProof(Task04::start)
                 && !Task04.start(5, 3, 5, 5)
                 && !Task04.start(5, 3, 3, 3)
-                && !Task04.start(5, 3, 5, 3)
                 && !Task04.start(5, 3, 3, 5)
                 && !Task04.start(5, 3, 7, 1)
                 && !Task04.start(5, 3, 1, 7)
                 && !Task04.start(5, 3, 3, 1)
                 && !Task04.start(5, 3, 7, 5)
                 && !Task04.start(5, 3, 7, 3)
+                && !Task04.start(1, 1, 0, 1)
+                && !Task04.start(1, 1, 1, 0)
+                && !Task04.start(2, 1, 1, -1)
+                && !Task04.start(1, 2, -1, 1)
                 && Task04.start(5, 3, 5, 4)
                 && Task04.start(5, 3, 5, 2)
                 && Task04.start(5, 3, 6, 3)
@@ -186,6 +190,10 @@ public class TaskTester {
                 && !Task05.start(6, 4, 7, 4)
                 && !Task05.start(6, 4, 6, 3)
                 && !Task05.start(6, 4, 6, 5)
+                && !Task05.start(-1, 4, 1, 6)
+                && !Task05.start(3, -1, 1, 1)
+                && !Task05.start(4, 1, 6, -1)
+                && !Task05.start(1, 3, -1, 1)
                 && Task05.start(6, 4, 8, 2)
                 && Task05.start(6, 4, 7, 3)
                 && Task05.start(6, 4, 4, 6)
@@ -211,7 +219,7 @@ public class TaskTester {
                 && Task06.start(4, 7, 4, 8)
                 && Task06.start(1, 7, 1, 8)
                 && Task06.start(8, 7, 8, 8);
-        
+
         return getResult("Task 06", result);
     }
 
@@ -265,6 +273,10 @@ public class TaskTester {
                 && !TaskX.start(3, 6, 7, 4)
                 && !TaskX.start(3, 6, 6, 3)
                 && !TaskX.start(3, 6, 6, 5)
+                && !TaskX.start(-1, 6, 1, 5)
+                && !TaskX.start(6, -1, 5, 1)
+                && !TaskX.start(1, 6, -1, 5)
+                && !TaskX.start(6, 1, 5, -1)
                 && TaskX.start(3, 6, 1, 5)
                 && TaskX.start(3, 6, 2, 4)
                 && TaskX.start(3, 6, 4, 4)
@@ -277,4 +289,3 @@ public class TaskTester {
         return getResult("Task X ", result);
     }
 }
-
