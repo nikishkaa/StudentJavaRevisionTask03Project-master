@@ -41,7 +41,6 @@ public class Task03 {
             return false;
         }
 
-        // почему то не работает хотя вроде бы должен
-        return (x1 == x2) || (y1 == y2);
+        return (x1 == x2 && y1 != y2) || (y1 == y2 && x1 != x2);
     }
 }
