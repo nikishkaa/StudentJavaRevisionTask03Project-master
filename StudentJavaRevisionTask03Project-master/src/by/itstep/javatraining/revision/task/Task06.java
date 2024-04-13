@@ -42,7 +42,19 @@ package by.itstep.javatraining.revision.task;
  */
 
 public class Task06 {
+    public static final int CHESS_START_MIN_X_POSITION = 1;
+    public static final int CHESS_MAX_SIZE = 8;
+    public static final int CHESS_MIN_SIZE = 1;
+
     public static boolean start(int x1, int y1, int x2, int y2) {
-        return false;
+// Тут тоже ошибка в тесте пещка должна ходить со второй клетки а судя по тесту она начинает ходить с первой1
+        if (x1 < CHESS_START_MIN_X_POSITION
+                || y1 > CHESS_MAX_SIZE || y1 < CHESS_MIN_SIZE
+                || x2 > CHESS_MAX_SIZE || x2 < CHESS_MIN_SIZE
+                || y2 < CHESS_MIN_SIZE || y2 > CHESS_MAX_SIZE) {
+            return false;
+        }
+
+        return x1 == x2 && y2 == y1 + 1 && y2 == 8;
     }
 }
