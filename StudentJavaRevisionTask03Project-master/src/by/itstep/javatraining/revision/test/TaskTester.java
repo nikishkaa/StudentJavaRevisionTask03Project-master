@@ -100,7 +100,7 @@ public class TaskTester {
 
         label1:
         for (int x = MIN_NUMBER; x <= MAX_NUMBER; x++) {
-            for (int y = MIN_NUMBER; y < MAX_NUMBER; y++) {
+            for (int y = MIN_NUMBER + 1; y < MAX_NUMBER; y++) {
                 if (!Task02.start(x, y, x, y + 1)) {
                     result = false;
                     break label1;
@@ -113,7 +113,7 @@ public class TaskTester {
 
             label2:
             for (int x = MIN_NUMBER; x <= MAX_NUMBER; x++) {
-                for (int y = MIN_NUMBER; y < MAX_NUMBER; y++) {
+                for (int y = MIN_NUMBER + 1; y < MAX_NUMBER; y++) {
                     int d1 = random.nextInt(MAX_NUMBER + 1 - MIN_NUMBER) + MIN_NUMBER;
                     int d2 = random.nextInt(MAX_NUMBER + 1 - MIN_NUMBER) + MIN_NUMBER;
 
@@ -216,6 +216,7 @@ public class TaskTester {
                 && !Task06.start(-1, 7, -1, 8)
                 && !Task06.start(0, 7, 0, 8)
                 && !Task06.start(9, 7, 9, 8)
+                && !Task06.start(1, 7, 1, 6)
                 && Task06.start(4, 7, 4, 8)
                 && Task06.start(1, 7, 1, 8)
                 && Task06.start(8, 7, 8, 8);
